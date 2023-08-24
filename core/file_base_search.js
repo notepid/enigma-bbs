@@ -121,6 +121,7 @@ exports.getModule = class FileBaseSearch extends MenuModule {
             extraArgs: {
                 filterCriteria: filterCriteria,
             },
+            menuFlags: ['popParent'],
         };
 
         return this.gotoMenu(

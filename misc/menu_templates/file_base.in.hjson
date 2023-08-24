@@ -388,7 +388,7 @@
             art: FEMPTYQ
             config: {
                 pause: true
-                menuFlags: [ "noHistory" ]
+                menuFlags: [ "noHistory", "popParent" ]
             }
         }
 
@@ -779,7 +779,7 @@
             art: FBNORES
             config: {
                 pause: true
-                menuFlags: [ "noHistory" ]
+                menuFlags: [ "noHistory", "popParent" ]
             }
         }
 
@@ -807,7 +807,7 @@
             art: FBNORES
             config: {
                 pause: true
-                menuFlags: [ "noHistory" ]
+                menuFlags: [ "noHistory", "popParent" ]
             }
         }
 
@@ -852,7 +852,7 @@
             art: ULNOAREA
             config: {
                 pause: true
-                menuFlags: [ "noHistory" ]
+                menuFlags: [ "noHistory", "popParent" ]
             }
         }
 

@@ -2,7 +2,7 @@
 'use strict';
 
 //  ENiGMA½
-const { MenuModule, MenuFlags } = require('./menu_module.js');
+const { MenuModule } = require('./menu_module.js');
 const messageArea = require('./message_area.js');
 const { Errors } = require('./enig_error.js');
 
@@ -25,9 +25,6 @@ const MciViewIds = {
 exports.getModule = class MessageConfListModule extends MenuModule {
     constructor(options) {
         super(options);
-
-        // always include noHistory flag
-        this.setMergedFlag(MenuFlags.NoHistory);
 
         this.initList();
 
@@ -52,7 +49,7 @@ exports.getModule = class MessageConfListModule extends MenuModule {
                                     extraArgs: {
                                         confTag: conf.confTag,
                                     },
-                                    menuFlags: [ MenuFlags.NoHistory ],
+                                    menuFlags: ['popParent', 'noHistory'],
                                 };
 
                                 return this.gotoMenu(

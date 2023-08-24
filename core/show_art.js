@@ -4,6 +4,7 @@
 //  ENiGMA½
 const MenuModule = require('./menu_module.js').MenuModule;
 const Errors = require('../core/enig_error.js').Errors;
+const ANSI = require('./ansi_term.js');
 const Config = require('./config.js').get;
 const { getMessageAreaByTag } = require('./message_area.js');
 
@@ -20,7 +21,6 @@ exports.moduleInfo = {
 exports.getModule = class ShowArtModule extends MenuModule {
     constructor(options) {
         super(options);
-
         this.config = Object.assign({}, _.get(options, 'menuConfig.config'), {
             extraArgs: options.extraArgs,
         });

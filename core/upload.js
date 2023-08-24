@@ -2,7 +2,7 @@
 'use strict';
 
 //  enigma-bbs
-const { MenuModule, MenuFlags } = require('./menu_module');
+const MenuModule = require('./menu_module.js').MenuModule;
 const stringFormat = require('./string_format.js');
 const getSortedAvailableFileAreas =
     require('./file_base_area.js').getSortedAvailableFileAreas;
@@ -75,8 +75,6 @@ const MciViewIds = {
 exports.getModule = class UploadModule extends MenuModule {
     constructor(options) {
         super(options);
-
-        this.setMergedFlag(MenuFlags.NoHistory);
 
         this.interrupt = MenuModule.InterruptTypes.Never;
 

@@ -113,6 +113,7 @@ exports.getModule = class MessageBaseSearch extends MenuModule {
         const returnNoResults = () => {
             return this.gotoMenu(
                 this.menuConfig.config.noResultsMenu || 'messageSearchNoResults',
+                { menuFlags: ['popParent'] },
                 cb
             );
         };
@@ -159,6 +160,7 @@ exports.getModule = class MessageBaseSearch extends MenuModule {
                     messageList,
                     noUpdateLastReadId: true,
                 },
+                menuFlags: ['popParent'],
             };
 
             return this.gotoMenu(
